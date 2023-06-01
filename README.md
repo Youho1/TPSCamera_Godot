@@ -1,0 +1,2 @@
+# TPSCamera_Godot
+tpsカメラの作り方を自分の友達に教える
