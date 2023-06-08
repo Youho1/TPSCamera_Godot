@@ -1,8 +1,8 @@
 extends KinematicBody
 
 export var speed = 7.0
-export var jump_strength = 20.0
-export var gravity = 50.0
+export var jump_strength = 30.0
+export var gravity = 100.0
 
 var _velocity = Vector3.ZERO
 var _snap_vector = Vector3.DOWN
@@ -29,7 +29,7 @@ func _physics_process(delta):
 		_snap_vector = Vector3.DOWN
 	_velocity = move_and_slide_with_snap(_velocity, _snap_vector, Vector3.UP, true)
 	
-	if _velocity.length() > 0.2:
+	if move_direction.length() > 0.2:
 		var look_direction = Vector2(_velocity.z, _velocity.x)
 		_model.rotation.y = look_direction.angle()
 		
